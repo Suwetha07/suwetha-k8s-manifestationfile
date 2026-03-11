@@ -7,15 +7,7 @@ metadata:
     app: ey-cart
 spec:
   containers:
-<<<<<<< HEAD
     - name: ey-cart-container
       image: muralisocial123/ey-cart:v1.1.0
       ports:  
         - containerPort: 3000
-=======
-  - name: ey-car-container
-    image: muralisocial123/ey-cart:v1.1.0
-    ports:
-      - containerPort: 3000
-
->>>>>>> d58da4af64cb1c1836915b84dadf6ede6ef008b1
