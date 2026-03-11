@@ -5,10 +5,9 @@ metadata:
   namespace: suwetha-ns
   labels:
     app: ey-cart
-spec: 
+spec:
   containers:
-  - name: ey-car-container
-  image: muralisocial123/ey-cart:v1.1.0
-  ports:
-    -containerPort: 3000
-
+    - name: ey-cart-container
+      image: muralisocial123/ey-cart:v1.1.0
+      ports:  
+        - containerPort: 3000
