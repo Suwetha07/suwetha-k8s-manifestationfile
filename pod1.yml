@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flower-pod
+  namespace: suwetha-ns
+  labels:
+    app: flower
+spec:
+  containers:
+    - name: flower-container
+      image: suwetha07/flowerimage
+      ports:  
+        - containerPort: 3000
