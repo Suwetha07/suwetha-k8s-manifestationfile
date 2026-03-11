@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ey-cart-rs
+  namespace: suwetha-ns
+  labels:
+    app: cart
+spec: #it defines the behavoiur of replica set
+  replicas: 3
+  selector: #It defines the Replicaset finds which pods to manage
+    matchLabels:
+      app: web
+  template: # It conatins pod definition
+    metadata:
+      labels:
+        app: web
+    spec: #It contains conatiner definition
+      containers:
+        - name: ey-cart-container
+          image: muralisocial123/ey-cart:v1.1.0
+          ports:
+            - containerPort: 3000
