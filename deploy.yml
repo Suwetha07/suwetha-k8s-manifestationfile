@@ -1,13 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ey-cart-deploy
+  name: ey-cart-deployment
   namespace: suwetha-ns
   labels:
-    app: cart
+    app: ey-cart
 spec:
   replicas: 3
-  selector:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector: 
     matchLabels:
       app: web
   template:
