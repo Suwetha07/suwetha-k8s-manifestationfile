@@ -7,7 +7,7 @@ metadata:
     app: cart
 spec: #it defines the behavoiur of replica set
   replicas: 3
-  selector: #It defines the Replicaset finds which pods to manage
+  selector: #It defines the Replicaset finds which pods to manag
     matchLabels:
       app: web
   template: # It conatins pod definition
@@ -17,6 +17,6 @@ spec: #it defines the behavoiur of replica set
     spec: #It contains conatiner definition
       containers:
         - name: ey-cart-container
-          image: muralisocial123/ey-cart:v1.1.0
+          image: muralisocial123/flipkart-app-web:v1.1.0
           ports:
             - containerPort: 3000
