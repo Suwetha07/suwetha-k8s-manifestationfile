@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: flower-pod
+  namespace: suwetha-ns
+  labels:
+    app: flower
+spec: #it defines the behavoiur of replica set
+  replicas: 4
+  selector: #It defines the Replicaset finds which pods to manage
+    matchLabels:
+      app: flower
+  template: # It conatins pod definition
+    metadata:
+      labels:
+        app: flower
+    spec: #It contains conatiner definition
+      containers:
+        - name: flower-container
+          image: suwetha07/flowerimage:latest
+          ports:
+            - containerPort: 3000
