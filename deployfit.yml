@@ -4,7 +4,7 @@ metadata:
   name: fit-deployment
   namespace: suwetha-ns
   labels:
-    app: fit-app
+    app: flower
 spec:
   replicas: 8
   strategy:
@@ -14,14 +14,14 @@ spec:
       maxSurge: 2
   selector: 
     matchLabels:
-      app: fit
+      app: flower
   template:
     metadata:
       labels:
-        app: fit
+        app: flower
     spec:
       containers:
         - name: fit-conatiner
-          image: muralisocial123/fitness-app:v1.0.1
+          image: muralisocial123/kyndrl-flower-app:v1.1.0
           ports:
-            - containerPort: 3000
+            - containerPort: 3015
