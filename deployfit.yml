@@ -24,7 +24,7 @@ spec:
         - name: fit-conatiner
           image: muralisocial123/fitness-app:v1.0.1
           ports:
-            - containerPort: 3000
+            - containerPort: 5000
 ---
 apiVersion: v1 
 kind: Service
@@ -36,6 +36,6 @@ spec:
     app: fit
   ports:
     - port: 3001 # It is service post number we are using to expose the applicatioon to the internet
-      targetPort: 3000
+      targetPort: 5000
       protocol: TCP 
   type: ClusterIP
