@@ -24,7 +24,7 @@ spec:
         - name: fit-conatiner
           image: muralisocial123/fitness-app:v1.0.1
           ports:
-            - containerPort: 5000
+            - containerPort: 3000
 ---
 apiVersion: v1 
 kind: Service
