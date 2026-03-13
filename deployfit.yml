@@ -4,7 +4,7 @@ metadata:
   name: fit-deployment
   namespace: suwetha-ns
   labels:
-    app: flower
+    app: fit-app
 spec:
   replicas: 8
   strategy:
@@ -14,11 +14,11 @@ spec:
       maxSurge: 2
   selector: 
     matchLabels:
-      app: flower
+      app: fit
   template:
     metadata:
       labels:
-        app: flower
+        app: fit
     spec:
       containers:
         - name: fit-conatiner
